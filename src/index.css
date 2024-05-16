@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('/background.avif'); /* Replace 'your-background-image-url.jpg' with the URL of your image */
+  background-size: cover; /* Make the background image cover the entire container */
+  background-position: center; /* Center the background image */
+
+}
+
+#main {
+  border: 2px solid purple;
+  background-color: #EDE8F5;
+  height: 93vh;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 800px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+}
+
+.navbar {
+  margin: 20px;
+  background-color: #FCFAFA;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo{
+  background-Color: #85BDFF;
+  height: 34px;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.links{
+  margin-right: 80px;
+}
+
+.links a {
+  color:#3D52A1;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  #main {
+    width: 340px;
+    margin: 20px 0;
+  }
+  
+  .navbar {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .logo{
+    margin-left: 0;
+  }
+
+  .links{
+    margin-right: 0;
+  }
+  
+  .links a {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
