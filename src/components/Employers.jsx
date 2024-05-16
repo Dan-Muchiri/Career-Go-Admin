@@ -1,11 +1,12 @@
+// Employers.jsx
 import React from 'react';
 
-const RightSide = () => {
+const Employers = () => {
     return (
         <div className="right-side">
-            {/* Content for the right side */}
+            <h1>Employers</h1>
         </div>
     );
 }
 
-export default RightSide;
+export default Employers;

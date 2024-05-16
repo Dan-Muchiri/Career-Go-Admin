@@ -1,5 +1,6 @@
 import React from 'react';
 import Ellipse from './Ellipse';
+import { NavLink } from 'react-router-dom';
 
 const LeftSide = () => {
     return (
@@ -12,10 +13,14 @@ const LeftSide = () => {
               <Ellipse />
               <h1>ADMIN</h1>
             </div> 
-            <div className='left-side-nav'>
+            <div className="left-side-nav">
                 <ul>
-                    <li><a href="#">Employers</a></li>
-                    <li><a href="#">JobSeekers</a></li>
+                    <li>
+                        <NavLink to="/employers">Employers</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/jobseekers">Job Seekers</NavLink>
+                    </li>
                 </ul>
             </div>
             <div>
