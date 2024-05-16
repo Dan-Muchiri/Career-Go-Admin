@@ -1,9 +1,12 @@
 import React from 'react';
+import LeftSide from './LeftSide';
+import RightSide from './RightSide';
 
 const Dashboard = () => {
     return (
         <div className="dashboard">
-            {/* Add your dashboard content here */}
+            <LeftSide />
+            <RightSide />
         </div>
     );
 }

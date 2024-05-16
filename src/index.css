@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 body, html {
   margin: 0;
@@ -23,7 +24,7 @@ body, html {
   width: 800px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
 }
-
+ 
 .navbar {
   margin: 20px;
   background-color: #FCFAFA;
@@ -62,6 +63,104 @@ body, html {
   text-decoration: underline;
 }
 
+.dashboard {
+  height: 100%;
+  display: flex;
+}
+
+.left-side{
+  height: 82%;
+  width: 30%;
+  margin-left: 20px;
+  background-color: #ADBBDA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.line {
+  border: none;
+  height: 2px;
+  background-color: purple;
+  margin: 10px;
+  width: 70%;
+}
+
+
+.left-side-title h1{
+  color: white;
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+  margin-top: 0;
+  margin-left: 15px;
+  font-weight: 400;
+  text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.ellipse{
+  position: relative;
+}
+
+.ellipse h1{
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 23%;
+  left: 19%;
+  font-size: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+.left-side-nav ul {
+  list-style-type: none;
+  padding: 30px;
+  margin: 0;
+}
+
+.left-side-nav li {
+  margin-bottom: 17px;
+}
+
+.left-side-nav a {
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  background-color: #F0F0F0; /* Add background color */
+  padding: 3px; /* Add padding for better readability */
+  border-radius: 4px; /* Add border radius for rounded corners */
+}
+
+.left-side-nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background-color: #3749A6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #5068C7;
+}
+
+button:active {
+  background-color: #273882;
+}
+
+
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   #main {
@@ -85,6 +184,49 @@ body, html {
   .links a {
     font-size: 12px;
     margin-left: 5px;
+  }
+
+
+  .dashboard,
+  .left-side {
+    flex-direction: row; /* Set flex direction to row for small screens */
+    height: fit-content;
+  }
+
+  .dashboard,
+  .left-side {
+    flex-direction: row; /* Set flex direction to row for small screens */
+    height: fit-content;
+    width: 94%;
+  }
+
+  .left-side {
+    width: 100%; /* Set the width to 100% to occupy the full width */
+    height: auto; /* Set height to auto to adjust based on content */
+  }
+
+  .ellipse {
+    display: none; /* Hide the ellipse component on small screens */
+  }
+
+  .left-side-nav ul {
+    padding: 10px; /* Reduce padding for better fit on small screens */
+  }
+
+  .left-side-nav li {
+    margin-bottom: 10px; /* Reduce margin between list items on small screens */
+  }
+
+  .left-side-title h1 {
+    font-size: 20px; /* Decrease font size for the title on small screens */
+  }
+
+  .left-side-nav a {
+    font-size: 12px; /* Decrease font size for navigation links on small screens */
+  }
+
+  .left-side-button{
+    display: none;
   }
 }
 
