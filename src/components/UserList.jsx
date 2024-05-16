@@ -24,6 +24,7 @@ const UserList = ({ fetchRoute, filter }) => {
             {users.map(user => (
                 <div key={user.id} className="user">
                     <span>{user.company_name}</span>
+                    <span>{user.first_name}</span>
                 </div>
             ))}
         </div>
