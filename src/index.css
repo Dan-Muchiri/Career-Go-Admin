@@ -159,6 +159,80 @@ button:active {
   background-color: #273882;
 }
 
+.right-side{
+  height: 82%;
+  flex:0.95;
+  margin-left: 20px;
+  background-color: #dbdee4;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content:center;
+}
+
+.right-side h1{
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 23px;
+}
+
+.right-side-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.right-side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right-side-nav li {
+  display: inline;
+  margin-right: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.right-side-nav li:last-child {
+  margin-right: 0;
+}
+
+.right-side-nav li:hover {
+  text-decoration: underline;
+}
+
+
+.user-list-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.user-list {
+  margin-top: 10px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user:last-child {
+  border-bottom: none;
+}
+
+.user span {
+  font-size: 16px;
+}
+
+
 
 
 /* Media query for smaller screens */
@@ -187,23 +261,27 @@ button:active {
   }
 
 
-  .dashboard,
-  .left-side {
-    flex-direction: row; /* Set flex direction to row for small screens */
-    height: fit-content;
-  }
-
-  .dashboard,
-  .left-side {
-    flex-direction: row; /* Set flex direction to row for small screens */
-    height: fit-content;
-    width: 94%;
+  .dashboard {
+    flex-direction: column; 
+    height: 79vh ;
   }
 
   .left-side {
-    width: 100%; /* Set the width to 100% to occupy the full width */
-    height: auto; /* Set height to auto to adjust based on content */
+    flex-direction: row; /* Set flex direction to row for small screens */
+    height: fit-content;
+    width: 86%;
   }
+
+  .right-side {
+    margin-top: 15px;
+    height: fit-content;
+    width: 86%;
+  }
+
+  .right-side h1{
+    font-size: 18px;
+  }
+
 
   .ellipse {
     display: none; /* Hide the ellipse component on small screens */
@@ -227,6 +305,14 @@ button:active {
 
   .left-side-button{
     display: none;
+  }
+
+  .list-nav{
+    height: 100%;
+  }
+
+  .user-list-container{
+    height: 65%;
   }
 }
 
