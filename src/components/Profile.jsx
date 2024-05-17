@@ -14,7 +14,11 @@ const Profile = () => {
     }, [id]);
 
     if (!user) {
-        return <div>Loading...</div>;
+        return (
+            <div className="loading-container">
+                <div className="loading">Loading...</div>
+            </div>
+        );
     }
 
     return (

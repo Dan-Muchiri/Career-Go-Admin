@@ -37,14 +37,11 @@ const UserRightSide = ({ user }) => {
                     <Card title="Skills">
                         <p>{jobseeker.skills}</p>
                     </Card>
-                    <Card title="Qualifications">
-                        <p>{jobseeker.qualifications}</p>
-                    </Card>
                     <Card title="Experience">
                         <p>{jobseeker.experience}</p>
                     </Card>
-                    <Card title="Education">
-                        <p>{jobseeker.education}</p>
+                    <Card title="Qualifications / Education">
+                        <p>{jobseeker.qualifications}</p>
                     </Card>
                     <Card title="Files">
                         <p>Files</p>

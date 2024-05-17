@@ -6,7 +6,7 @@ const UserLeftSide = ({ user }) => {
             {user.role === 'employer' && user.employer.length > 0 && user.employer.map((employer, index) => (
                 <div key={index} className='employer-left-side'>
                     <div className="profile-pic">
-                        <img src={'/Employerlogo.png'} alt={`${user.username}`} className="employer-picture"/>
+                        <img src={employer.picture} alt={`${user.username}`} className="employer-picture"/>
                         <p className="verification-status">
                             Verification: {employer.profile_verified ? 'Verified' : 'Pending'}
                         </p>
@@ -26,7 +26,7 @@ const UserLeftSide = ({ user }) => {
             {user.role === 'jobseeker' && user.jobseeker.length > 0 && user.jobseeker.map((jobseeker, index) => (
                 <div key={index} className='employer-left-side'>
                     <div className="profile-pic">
-                        <img src={'/jobseeker.png'} alt={`${user.username}`} className="employer-picture"/>
+                        <img src={jobseeker.picture} alt={`${user.username}`} className="employer-picture"/>
                         <p className="verification-status">
                             Verification: {user.profile_verified ? 'Verified' : 'Pending'}
                         </p>
