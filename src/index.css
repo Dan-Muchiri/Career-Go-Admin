@@ -319,6 +319,44 @@ button:active {
   margin: 5px 0;
 }
 
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  padding: 15px;
+  width: fit-content;
+  max-width: 320px;
+  min-width: 250px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color:  #3D52A1;
+}
+
+.card span{
+  color:  #3D52A1;
+}
+
+.card-content {
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+  color: rgb(15, 14, 14);
+}
+
+.employer-right-side{
+  height: 100%;
+  padding: 20px;
+  padding-left: 70px;
+  overflow-y: auto;
+}
+
+.right-buttons{
+  display: none;
+}
+
+
 
 
 
@@ -435,6 +473,23 @@ button:active {
   }
   .user-details {
     padding: 6px;
+  }
+
+  .employer-right-side{
+    height: 50vh;
+    padding: 20px;
+    padding-left: 20px;
+    overflow-y: auto;
+  }
+  
+  .card {
+    width: fit-content;
+    max-width: 320px;
+    min-width: 200px;
+  }
+
+  .right-buttons{
+    display: flex;
   }
 }
 

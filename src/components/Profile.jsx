@@ -20,7 +20,7 @@ const Profile = () => {
     return (
         <div className="profile">
             <UserLeftSide user={user} />
-            <UserRightSide />
+            <UserRightSide user={user}/>
         </div>
     );
 }
