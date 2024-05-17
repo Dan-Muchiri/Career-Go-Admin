@@ -479,7 +479,7 @@ button:active {
     font-size: 12px; /* Decrease font size for navigation links on small screens */
   }
 
-  .left-side-button{
+  .left-side-buttons{
     display: none;
   }
 

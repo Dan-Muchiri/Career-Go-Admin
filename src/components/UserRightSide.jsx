@@ -2,8 +2,11 @@ import React from 'react';
 import Card from './Card';
 import Files from './Files'; // Import the Files component
 import Payments from './Payments';
+import Verification from './Verification';
+import useUserStore from './useUserStore';
 
-const UserRightSide = ({ user }) => {
+const UserRightSide = () => {
+    const { user} = useUserStore();
     return (
         <div className="right-side">
             {user.role === 'employer' && user.employer.length > 0 && user.employer.map((employer, index) => (
@@ -23,8 +26,10 @@ const UserRightSide = ({ user }) => {
                         <p><span>App Rating:</span> {employer.app_rating}/5</p>
                     </Card>
                     <div className='right-buttons'>
-                        <button>Verify</button>
-                        <button>Reject</button>
+                        <Verification
+                            userId={employer.id}
+                            route="employers"
+                        />
                     </div>
                 </div>
             ))}
@@ -57,8 +62,10 @@ const UserRightSide = ({ user }) => {
                         <p><span>App Rating:</span> {jobseeker.app_rating}/5</p>
                     </Card>
                     <div className='right-buttons'>
-                        <button>Verify</button>
-                        <button>Reject</button>
+                    <Verification
+                        userId={jobseeker.id}
+                        route="jobseekers"
+                    />
                     </div>
                 </div>
             ))}

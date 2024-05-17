@@ -43,7 +43,7 @@ const LeftSide = () => {
                 </ul>
             </div>
             <div>
-                <button className='left-side-button' onClick={handleLogout}>Log Out</button>
+                <button className='left-side-buttons' onClick={handleLogout}>Log Out</button>
             </div>
               
         </div>
