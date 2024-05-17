@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
     const navigate = useNavigate();
@@ -33,7 +33,7 @@ const NavBar = () => {
                     }}/>
             </div>
             <div className="links">
-                <a href="#">DASHBOARD</a>
+            <Link to="/dashboard">DASHBOARD</Link>
                 <a href="#" onClick={handleLogout}>LOGOUT</a>
             </div>
         </div>

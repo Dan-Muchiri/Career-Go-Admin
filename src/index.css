@@ -64,7 +64,7 @@ body, html {
   text-decoration: underline;
 }
 
-.dashboard {
+.dashboard, .profile {
   height: 100%;
   display: flex;
 }
@@ -223,6 +223,11 @@ button:active {
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.user:hover {
+  background-color: #f0f0f0;
 }
 
 .user:last-child {
@@ -277,6 +282,43 @@ button:active {
   margin-top: 5px;
 }
 
+.employer-left-side {
+  margin-bottom: 20px;
+}
+
+.profile-pic{
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.employer-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+
+.verification-status {
+  font-size: 14px;
+  color: #3749A6;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0;
+}
+
+.user-details {
+  padding: 15px;
+}
+
+.user-info {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color:wh;
+  margin: 5px 0;
+}
+
 
 
 
@@ -308,7 +350,7 @@ button:active {
   }
 
 
-  .dashboard {
+  .dashboard, .profile {
     flex-direction: column; 
     height: 79vh ;
   }
@@ -364,6 +406,35 @@ button:active {
 
   .login-container{
     width: 70%;
+  }
+
+  .employer-left-side {
+    margin: 0;
+    display: flex;
+  }
+
+  .profile-pic {
+    margin-top: 10px;
+    width: 100px;
+  }
+
+  .employer-picture {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+  .verification-status {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .user-info {
+    font-size: 12px;
+  }
+  .user-details {
+    padding: 6px;
   }
 }
 
