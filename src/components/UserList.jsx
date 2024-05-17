@@ -21,8 +21,6 @@ const UserList = ({ fetchRoute, filter }) => {
 
     const handleUserClick = (id) => {
         navigate(`/user/${id}`);
-        // Reload the page
-        window.location.reload();
     };
 
     return (

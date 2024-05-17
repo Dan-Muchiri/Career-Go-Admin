@@ -6,7 +6,7 @@ const UserLeftSide = ({ user }) => {
             {user.employer.length > 0 && user.employer.map((employer, index) => (
                 <div key={index} className='employer-left-side'>
                     <div className="profile-pic">
-                        <img src={employer.picture} alt={`${user.username}`} className="employer-picture"/>
+                        <img src={'/Employerlogo.png'} alt={`${user.username}`} className="employer-picture"/>
                         <p className="verification-status">
                             Verification: {employer.profile_verified ? 'Verified' : 'Pending'}
                         </p>
