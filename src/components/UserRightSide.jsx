@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import Files from './Files'; // Import the Files component
+import Payments from './Payments';
 
 const UserRightSide = ({ user }) => {
     return (
@@ -12,7 +13,7 @@ const UserRightSide = ({ user }) => {
                         <p><span>Username:</span> {user.username}</p>
                     </Card>
                     <Card title="Payment Details">
-                        <p>Payment</p>
+                        <Payments payments={employer.payments} />
                     </Card>
                     <Card title="Files">
                         <Files files={employer.files} /> {/* Pass employer's files to Files component */}
@@ -21,6 +22,10 @@ const UserRightSide = ({ user }) => {
                         <p>{employer.testimonial}</p>
                         <p><span>App Rating:</span> {employer.app_rating}/5</p>
                     </Card>
+                    <div className='right-buttons'>
+                        <button>Verify</button>
+                        <button>Reject</button>
+                    </div>
                 </div>
             ))}
             {user.role === 'jobseeker' && user.jobseeker.length > 0 && user.jobseeker.map((jobseeker, index) => (

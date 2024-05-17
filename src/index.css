@@ -374,7 +374,38 @@ button:active {
 }
 
 
+.payments-container {
+  padding: 8px; /* Add padding to the container */
+}
 
+.payments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.payment-item p {
+  margin: 5px 5px ; /* Reduce margin for paragraphs */
+  padding: 0 5px ; /* Reduce padding for paragraphs */
+  font-size: 16px;
+}
+
+.payment-date {
+  color: #3D52A1;
+  font-weight: bold;
+}
+
+.payment-amount {
+  color: #3749A6;
+}
 
 
 
