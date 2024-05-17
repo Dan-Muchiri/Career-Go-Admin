@@ -1,9 +1,10 @@
 import React from 'react';
 import useUserStore from './useUserStore';
+import { useNavigate } from 'react-router-dom';
 
 const Verification = ({ userId, route }) => {
-
-    const { isVerified, setIsVerified} = useUserStore();
+    const { user, isVerified, setIsVerified } = useUserStore(); // Added setUsers from useUserStore
+    const navigate = useNavigate();
 
     const handleVerify = async () => {
         try {
@@ -27,12 +28,31 @@ const Verification = ({ userId, route }) => {
         }
     };
 
+    const handleReject = async () => {
+        try {
+            const response = await fetch(`https://careergo-api.onrender.com/users/${user.id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                
+                // Optionally, you can perform any cleanup actions here
+                alert('User deleted successfully');
+                navigate('/dashboard');
+            } else {
+                console.error('Failed to delete user:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error deleting user:', error);
+        }
+    };
+
     return (
         <>
             <button onClick={handleVerify}>
                 {isVerified ? 'Unverify' : 'Verify'}
             </button>
-            <button >Reject</button>
+            <button onClick={handleReject}>Reject</button>
         </>
     );
 }
