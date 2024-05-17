@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Files from './Files'; // Import the Files component
 
 const UserRightSide = ({ user }) => {
     return (
@@ -14,11 +15,11 @@ const UserRightSide = ({ user }) => {
                         <p>Payment</p>
                     </Card>
                     <Card title="Files">
-                        <p>Files</p>
+                        <Files files={employer.files} /> {/* Pass employer's files to Files component */}
                     </Card>
                     <Card title="Testimonial">
                         <p>{employer.testimonial}</p>
-                        <p><span>App_rating:</span> {employer.app_rating}</p>
+                        <p><span>App Rating:</span> {employer.app_rating}/5</p>
                     </Card>
                 </div>
             ))}
@@ -44,11 +45,11 @@ const UserRightSide = ({ user }) => {
                         <p>{jobseeker.qualifications}</p>
                     </Card>
                     <Card title="Files">
-                        <p>Files</p>
+                        <Files files={jobseeker.files} /> {/* Pass jobseeker's files to Files component */}
                     </Card>
                     <Card title="Testimonial">
                         <p>{jobseeker.testimonial}</p>
-                        <p><span>App_rating:</span> {jobseeker.app_rating}</p>
+                        <p><span>App Rating:</span> {jobseeker.app_rating}/5</p>
                     </Card>
                     <div className='right-buttons'>
                         <button>Verify</button>
