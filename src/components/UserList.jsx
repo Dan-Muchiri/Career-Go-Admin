@@ -7,7 +7,6 @@ const UserList = ({ fetchRoute, filter }) => {
         fetch(fetchRoute)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 if (filter === 'All') {
                     setUsers(data);
                 } else if (filter === 'Verified') {
@@ -17,7 +16,6 @@ const UserList = ({ fetchRoute, filter }) => {
                 }
             });
     }, [fetchRoute, filter]);
-    console.log(`users:${users}`)
 
     return (
         <div className="user-list">

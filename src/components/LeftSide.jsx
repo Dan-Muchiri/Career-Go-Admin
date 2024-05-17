@@ -16,10 +16,10 @@ const LeftSide = () => {
             <div className="left-side-nav">
                 <ul>
                     <li>
-                        <NavLink to="/employers">Employers</NavLink>
+                        <NavLink to="employers">Employers</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/jobseekers">Job Seekers</NavLink>
+                        <NavLink to="jobseekers">Job Seekers</NavLink>
                     </li>
                 </ul>
             </div>

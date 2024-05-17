@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <div className="navbar">
             <div className='logo'>
-                <img src="logo.png" alt="Logo" 
+                <img src="/logo.png" alt="Logo" 
                 style={{
                         height: '34px',
                         borderRadius: '8px',
