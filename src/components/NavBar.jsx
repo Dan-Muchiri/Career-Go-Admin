@@ -1,6 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('https://careergo-api.onrender.com/admin_logout', {
+                method: 'DELETE',
+            });
+    
+            if (response.ok) {
+                navigate('/');
+            } else {
+                console.error('Logout failed');
+            }
+        } catch (error) {
+            console.error('Error logging out:', error);
+        }
+
+    };
+
     return (
         <div className="navbar">
             <div className='logo'>
@@ -14,10 +34,10 @@ const NavBar = () => {
             </div>
             <div className="links">
                 <a href="#">DASHBOARD</a>
-                <a href="#">LOGOUT</a>
+                <a href="#" onClick={handleLogout}>LOGOUT</a>
             </div>
         </div>
     );
-}
+};
 
 export default NavBar;

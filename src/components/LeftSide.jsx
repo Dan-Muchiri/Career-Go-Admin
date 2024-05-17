@@ -1,8 +1,27 @@
 import React from 'react';
 import Ellipse from './Ellipse';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LeftSide = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('https://careergo-api.onrender.com/admin_logout', {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                navigate('/');
+            } else {
+                console.error('Logout failed');
+            }
+        } catch (error) {
+            console.error('Error logging out:', error);
+        }
+    };
     return (
         <div className="left-side">
             <div className="left-side-title">
@@ -24,7 +43,7 @@ const LeftSide = () => {
                 </ul>
             </div>
             <div>
-                <button className='left-side-button'>Log Out</button>
+                <button className='left-side-button' onClick={handleLogout}>Log Out</button>
             </div>
               
         </div>

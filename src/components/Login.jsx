@@ -36,7 +36,7 @@ const Login = () => {
       const data = await response.json();
 
       // Check response data for any errors or unexpected format
-      alert('Login successful:', data);
+      alert('Login successful!');
 
       // Redirect after processing successful response
       navigate('/dashboard');
