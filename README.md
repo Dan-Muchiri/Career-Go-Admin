@@ -4,6 +4,7 @@ CareerGo Admin is a web application designed to manage user data and perform adm
 
 ## Deployment
 Deployed on [Render](https://career-go-admin.netlify.app/).
+The login credentials are: Email: admin@gmail.com  Password: @ADMIN1
 
 ## Features
 
