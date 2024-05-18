@@ -1,8 +1,20 @@
-# React + Vite
+# CareerGo Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareerGo Admin is a web application designed to manage user data and perform administrative tasks for the CareerGo platform. It provides an intuitive interface for administrators to view, verify, and manage user profiles efficiently.
 
-Currently, two official plugins are available:
+## Deployment
+Deployed on [Render](https://render.com/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **User Management**: View and manage user profiles, including job seekers and employers.
+- **Profile Verification**: Verify user profiles by updating their verification status.
+- **Data Visualization**: Visualize all user data for better insights.
+- **Filter**: Filter user profiles based on verification.
+- **Deletion**: Delete user accounts violating terms.
+- **Responsive Design**: Ensure optimal user experience across devices with a responsive design.
+
+## Technologies Used
+
+- **Frontend**: React.js, Zustand, Formik, Yup, React Router DOM
+- **Backend**: Flask API - [CareerGo API](https://careergo-api.onrender.com/)
