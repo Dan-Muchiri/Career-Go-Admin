@@ -9,7 +9,7 @@ The login credentials are: Email: admin@gmail.com  Password: @ADMIN1
 ## Features
 
 - **User Management**: View and manage user profiles, including job seekers and employers.
-- **Profile Verification**: Verify user profiles by updating their verification status.
+- **Profile Verification**: Verify user profiles by updating their verification status based on payment status or files uploaded.
 - **Data Visualization**: Visualize all user data for better insights.
 - **Filter**: Filter user profiles based on verification.
 - **Deletion**: Delete user accounts violating terms.
