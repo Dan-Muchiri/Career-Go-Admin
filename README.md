@@ -3,7 +3,7 @@
 CareerGo Admin is a web application designed to manage user data and perform administrative tasks for the CareerGo platform. It provides an intuitive interface for administrators to view, verify, and manage user profiles efficiently.
 
 ## Deployment
-Deployed on [Render](https://render.com/).
+Deployed on [Render](https://career-go-admin.netlify.app/).
 
 ## Features
 
