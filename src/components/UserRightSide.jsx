@@ -4,11 +4,13 @@ import Files from './Files'; // Import the Files component
 import Payments from './Payments';
 import Verification from './Verification';
 import useUserStore from './useUserStore';
+import { Link } from 'react-router-dom';
 
 const UserRightSide = () => {
     const { user} = useUserStore();
     return (
         <div className="right-side">
+            <Link className='home-link' to="/dashboard">DASHBOARD</Link>
             {user.role === 'employer' && user.employer.length > 0 && user.employer.map((employer, index) => (
                 <div key={index} className='employer-right-side'>
                     <Card title="Profile">
@@ -42,8 +44,34 @@ const UserRightSide = () => {
                         <p><span>Job Category:</span> {jobseeker.job_category}</p>
                         <p><span>Availability:</span> {jobseeker.availability}</p>
                         <p><span>Salary Expectation:</span> {jobseeker.salary_expectation}</p>
-                        <p><span>Github:</span> {jobseeker.github_link}</p>
-                        <p><span>LinkedIn:</span> {jobseeker.linkedin_link}</p>
+                        <p>
+                            <span>Github:</span> 
+                            {jobseeker?.github_link ? (
+                                <a
+                                href={jobseeker.github_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                  Github link
+                                </a>
+                            ) : (
+                                'null'
+                            )}
+                        </p>
+                        <p>
+                            <span>LinkedIn:</span> 
+                            {jobseeker?.linkedin_link ? (
+                                <a
+                                href={jobseeker.linkedin_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >
+                                  LinkedIn link
+                                </a>
+                            ) : (
+                                'null'
+                            )}
+                        </p>
                     </Card>
                     <Card title="Skills">
                         <p>{jobseeker.skills}</p>

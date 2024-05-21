@@ -33,7 +33,6 @@ const NavBar = () => {
                     }}/>
             </div>
             <div className="links">
-            <Link to="/dashboard">DASHBOARD</Link>
                 <a href="#" onClick={handleLogout}>LOGOUT</a>
             </div>
         </div>

@@ -10,15 +10,15 @@ const UserLeftSide = () => {
             {user && user.role === 'employer' && user.employer.length > 0 && user.employer.map((employer, index) => (
                 <div key={index} className='employer-left-side'>
                     <div className="profile-pic">
-                        <img src={employer.picture} alt={`${employer.username}`} className="employer-picture"/>
+                        <img src={ employer.picture ||'/Employerlogo.png'} alt={`${employer.username}`} className="employer-picture"/>
                         <p className="verification-status">
                             Verification: {isVerified ? 'Verified' : 'Pending'}
                         </p>
                     </div>
                     <div className="user-details">
                         <p className="user-info"><strong>Company:</strong> {employer.company_name}</p>
-                        <p className="user-info"><strong>Email:</strong> {employer.email}</p>
-                        <p className="user-info"><strong>Phone Number:</strong> {employer.phone_number}</p>
+                        <p className="user-info"><strong>Email:</strong> {user.email}</p>
+                        <p className="user-info"><strong>Phone Number:</strong> {user.phone_number}</p>
                         <p className="user-info"><strong>Role:</strong> {user.role}</p>
                     </div>
                     <div className='left-side-buttons'>
@@ -32,15 +32,15 @@ const UserLeftSide = () => {
             {user && user.role === 'jobseeker' && user.jobseeker.length > 0 && user.jobseeker.map((jobseeker, index) => (
                 <div key={index} className='employer-left-side'>
                     <div className="profile-pic">
-                        <img src={jobseeker.picture} alt={`${jobseeker.username}`} className="employer-picture"/>
+                        <img src={jobseeker?.picture || '/jobseeker.png'} alt={`${jobseeker.username}`} className="employer-picture"/>
                         <p className="verification-status">
                             Verification: {isVerified ? 'Verified' : 'Pending'}
                         </p>
                     </div>
                     <div className="user-details">
-                        <p className="user-info"><strong>Username:</strong> {jobseeker.username}</p>
-                        <p className="user-info"><strong>Email:</strong> {jobseeker.email}</p>
-                        <p className="user-info"><strong>Phone Number:</strong> {jobseeker.phone_number}</p>
+                        <p className="user-info"><strong>Username:</strong> {user.username}</p>
+                        <p className="user-info"><strong>Email:</strong> {user.email}</p>
+                        <p className="user-info"><strong>Phone Number:</strong> {user.phone_number}</p>
                         <p className="user-info"><strong>Role:</strong> {user.role}</p>
                     </div>
                     <div className='left-side-buttons'>
